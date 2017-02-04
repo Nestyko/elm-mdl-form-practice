@@ -12,9 +12,6 @@ import Material
 import Material.Scheme
 import Material.Button as Button
 import Material.Options as Options exposing (css)
-import Form exposing (Form)
-import Form.Validate as Validate exposing (..)
-import Form.Input as Input
 
 -- MODEL
 
@@ -35,8 +32,6 @@ model =
         -- Boilerplate: Always use this initial Mdl model store.
     }
 
-
-
 -- ACTION, UPDATE
 
 
@@ -48,6 +43,7 @@ type Msg
 
 
 -- Boilerplate: Msg clause for internal Mdl messages.
+-- Forward form msgs to Form.update
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
